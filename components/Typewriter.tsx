@@ -30,7 +30,7 @@ export default function Typewriter() {
   }, [currentTypingIndex, currentPhraseIndex, isDeleting, typingSpeed]);
 
   return (
-    <div style={{ color : 'white'}}>
+    <div style={{}}>
       {phrases[currentPhraseIndex].substring(0, currentTypingIndex)}
     </div>
   );
