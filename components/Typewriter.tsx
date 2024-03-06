@@ -21,7 +21,7 @@ export default function Typewriter() {
     }, typingSpeed);
 
     if (currentTypingIndex === phrases[currentPhraseIndex].length && !isDeleting) {
-      setTypingSpeed(250); // Delay before deleting the phrase
+      setTypingSpeed(150); // Delay before deleting the phrase
     } else if (currentTypingIndex === 0 && isDeleting) {
       setTypingSpeed(100); // Delay before typing the next phrase
     }
