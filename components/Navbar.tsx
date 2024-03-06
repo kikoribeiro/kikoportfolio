@@ -11,7 +11,7 @@ import { Button } from './ui/button';
   return (
     <>
     <header className="flex items-center justify-between px-4 py-6  ">
-      <Link className="text-xl font-bold tracking-wider" href="#">
+      <Link className="text-xl font-bold tracking-wider" href="/">
         KIKO
       </Link>
       <nav className="space-x-6">
@@ -20,17 +20,17 @@ import { Button } from './ui/button';
             Home
           </Link>
         </Button>
-        <Button  variant="ghost">
-          <Link  href="">
-            Services
-          </Link>
-        </Button>
         <Button className="" variant="ghost">
           <Link href="/about">
             About
           </Link>
         </Button>
-        <Button className="" variant="ghost">
+        <Button  variant="ghost">
+          <Link  href="/sugestions">
+            Sugestions
+          </Link>
+        </Button>
+        <Button variant="ghost">
           <Link  href="#">
             Contact
           </Link>
