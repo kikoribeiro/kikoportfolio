@@ -1,8 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 
 export default function Typewriter() {
-  const phrases = ['Made with Next.JS'];
+  const phrases = ["Made with Next.JS"];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentTypingIndex, setCurrentTypingIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -10,7 +10,10 @@ export default function Typewriter() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if (!isDeleting && currentTypingIndex === phrases[currentPhraseIndex].length) {
+      if (
+        !isDeleting &&
+        currentTypingIndex === phrases[currentPhraseIndex].length
+      ) {
         setIsDeleting(true);
       } else if (isDeleting && currentTypingIndex === 0) {
         setIsDeleting(false);
@@ -20,7 +23,10 @@ export default function Typewriter() {
       setCurrentTypingIndex((prev) => (isDeleting ? prev - 1 : prev + 1));
     }, typingSpeed);
 
-    if (currentTypingIndex === phrases[currentPhraseIndex].length && !isDeleting) {
+    if (
+      currentTypingIndex === phrases[currentPhraseIndex].length &&
+      !isDeleting
+    ) {
       setTypingSpeed(150); // Delay before deleting the phrase
     } else if (currentTypingIndex === 0 && isDeleting) {
       setTypingSpeed(100); // Delay before typing the next phrase
@@ -34,6 +40,4 @@ export default function Typewriter() {
       {phrases[currentPhraseIndex].substring(0, currentTypingIndex)}
     </div>
   );
-};
-
-
+}

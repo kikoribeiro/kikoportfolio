@@ -1,11 +1,8 @@
-
-import Typewriter from '@/components/Typewriter';
-import Navbar from '@/components/Navbar';
-import './globals.css';
-
+import Typewriter from "@/components/Typewriter";
+import Navbar from "@/components/Navbar";
+import "./globals.css";
 
 export default function HomePage() {
-
   return (
     <>
       <Navbar />
@@ -17,6 +14,5 @@ export default function HomePage() {
         </div>
       </div>
     </>
-    
   );
 }
