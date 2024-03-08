@@ -14,19 +14,27 @@ export default function Navbar() {
           KIKO
         </Link>
         <nav className="flex gap-6">
+        <Link href="/">
           <Button variant="ghost">
-            <Link href="/">Home</Link>
+            Home
           </Button>
-          <Button className="" variant="ghost">
-            <Link href="/about">About</Link>
-          </Button>
+        </Link>
+        <Link href="/about">
           <Button variant="ghost">
-            <Link href="/sugestions">Sugestions</Link>
+            About
           </Button>
+        </Link>
+        <Link href="/sugestions">
           <Button variant="ghost">
-            <Link href="#">Contact</Link>
+            Sugestions
           </Button>
-          <ModeToggle />
+        </Link>
+        <Link href="#">
+          <Button variant="ghost">
+            Contact
+          </Button>
+        </Link>
+        <ModeToggle />
         </nav>
       </header>
     </>
