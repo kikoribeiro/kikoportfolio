@@ -7,8 +7,15 @@ export default function Typewriter() {
   const [currentTypingIndex, setCurrentTypingIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(100);
+   const [containerHeight, setContainerHeight] = useState("auto"); // Initialize with auto height
+  
 
   useEffect(() => {
+    const maxPhraseLength = Math.max(...phrases.map(phrase => phrase.length));
+    const lineHeight = 20; // Height per line (adjust according to your styling)
+    const maxHeight = maxPhraseLength * lineHeight; // Total height
+    setContainerHeight(`${maxHeight}px`);
+
     const timeout = setTimeout(() => {
       if (
         !isDeleting &&
@@ -36,7 +43,7 @@ export default function Typewriter() {
   }, [currentTypingIndex, currentPhraseIndex, isDeleting, typingSpeed]);
 
   return (
-    <div style={{}}>
+    <div style={{height: containerHeight}}>
       {phrases[currentPhraseIndex].substring(0, currentTypingIndex)}
     </div>
   );
